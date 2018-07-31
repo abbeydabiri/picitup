@@ -13,7 +13,6 @@ var page = {
 
 	oninit:function(vnode){
 		m.mount(document.getElementById('appMenu'), menu)
-		m.mount(document.getElementById('appFooter'), footer)
 	},
 	view:function(vnode){
 		return (

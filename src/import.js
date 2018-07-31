@@ -50,7 +50,7 @@ export var page = {
 								</div>
 								<div class="w-100 br2">
 									<div class="f6 avenir tl cf">
-										<a href="/login" oncreate={m.route.link} class="white no-underline ph1 br1">
+										<a href="/login/" oncreate={m.route.link} class="white no-underline ph1 br1">
 											<span class="fw5 db">Already Registered?</span>
 											<span class="fw5 db white">Login using password</span>
 										</a>

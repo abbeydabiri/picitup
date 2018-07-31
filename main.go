@@ -1,3 +1,4 @@
+// package PICITUP
 package main
 
 import (
@@ -24,6 +25,7 @@ func main() {
 
 }
 
+//Start ...
 func Start(TIMEZONE, VERSION, COOKIE, DBPATH, OS, OSPATH, ADDRESS string) {
 	//OS e.g "ios" or "android"
 	//PATH e.g "/sdcard/com.sample.app/"
@@ -35,8 +37,8 @@ os: %v
 path: %v
 address: %v
 encryption_keys:
-  public: /public.pem
-  private: /private.pem
+  public: public.pem
+  private: private.pem
 `, TIMEZONE, VERSION, COOKIE, DBPATH, OS, OSPATH, ADDRESS))
 
 	utils.Logger(OSPATH)
@@ -44,6 +46,7 @@ encryption_keys:
 	go api.StartRouter()
 }
 
+//Stop ...
 func Stop() {
 	sMessage := "stopping service @ " + config.Get().Address
 	println(sMessage)

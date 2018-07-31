@@ -11,7 +11,7 @@ var page = { sliderContainer:[],
 		return(
 			<article class="min-vh-100 dt w-100" style="">
 				<div class="dtc v-mid tc black ph2 relative">
-				<a href="/login" class="link absolute right-0 top-0 pa3 tracked f6 b tc green">
+				<a oncreate={m.route.link} href="/login/" class="link absolute right-0 top-0 pa3 tracked f6 b tc green">
 					SKIP
 				</a>
 

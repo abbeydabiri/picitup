@@ -62,38 +62,38 @@ export var menu = {
 		return (
 			<section id="menuBlur" class={"z-max w-100 "+menu.menuFixed}>
 				<div id="menuCover"  class="fixed z-max right-0 w-100 vh-100 fr dn pa0" style="">
-					<ul id="menuToggle" class="fr tr list pl0 vh-100 ma0 bg-yellow overflow-y-scroll overflow-y-hidden-l" style="">
+					<ul id="menuToggle" class="fr tr w-40 w-30-ns list pl0 vh-100 ma0 bg-yellow overflow-y-scroll overflow-y-hidden-l" style="">
 						<li class="w-100 cf pa3">
 							<Icons name="cancel" class="h1 dim dib white" onclick={menu.toggle}/>
 						</li>
-						<a oncreate={m.route.link} class="link white f5" href="/app/account">
+						<a oncreate={m.route.link} class="link white f5" href="/app/cleanup/">
 							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
-								Accounts
+								Clean UP
 							</li>
 						</a>
-						<a oncreate={m.route.link} class="link white f5" href="/app/transaction">
+						<a oncreate={m.route.link} class="link white f5" href="/app/recycle/">
 							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
-								Transactions
+								Recycle
 							</li>
 						</a>
-						<a oncreate={m.route.link} class="link white f5" href="/app/browser">
+						<a oncreate={m.route.link} class="link white f5" href="/app/gallery/">
 							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
-								Dapp Browser
+								Gallery
 							</li>
 						</a>
-						<a oncreate={m.route.link} class="link white f5" href="/app/recipient">
+						<a oncreate={m.route.link} class="link white f5" href="/app/map/">
 							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
-								Recipients
+								Dirt Map
 							</li>
 						</a>
-						<a oncreate={m.route.link} class="link white f5" href="/app/wallet">
+						<a oncreate={m.route.link} class="link white f5" href="/app/earning/">
 							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
-								Wallets
+								Earnings
 							</li>
 						</a>
-						<a oncreate={m.route.link} class="link white f5" href="/app/wallet">
-							<li class="w-100 ttu tracked cf pa3" onclick={menu.toggle}>
-								Settings
+						<a class="link white f5" href="/">
+							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+								LOGOUT
 							</li>
 						</a>
 						<li class="tc pa3 fw3 f6 gray" onclick={menu.toggle}>
@@ -103,7 +103,7 @@ export var menu = {
 				</div>
 
 				<nav id="nav" class="w-100 mw8 pa3 fixed z-9999">
-					<Icons name="menu" class=" gray h1 fr pa2 bg-yellow br1" onclick={menu.toggle}/>
+					<Icons name="menu" class=" purple h1 fr pa2 bg-white br1" onclick={menu.toggle}/>
 				</nav>
 
 				<div id="appAlert"></div>

@@ -2,11 +2,13 @@ var m = require("mithril")
 
 //Generic Website Pages
 import indexPage from './index.js';
-import browserPage from './browser.js';
-import accountPage from './account.js';
+import mapPage from './map.js';
+import cleanupPage from './cleanup.js';
+import recyclePage from './recycle.js';
 import recipientPage from './recipient.js';
+import galleryPage from './gallery.js';
 import walletPage from './wallet.js';
-import transactionPage from './transaction.js';
+import earningPage from './earning.js';
 //
 
 
@@ -27,11 +29,13 @@ m.route.mode = "pathname"
 m.route(document.getElementById('appContent'), "/app", {
 	"/app":{ view: function(vnode) { return m(indexPage);},},
 
-	"/app/browser":{ view: function(vnode) { return m(browserPage);},},
-	"/app/account":{ view: function(vnode) { return m(accountPage);},},
+	"/app/map":{ view: function(vnode) { return m(mapPage);},},
+	"/app/cleanup":{ view: function(vnode) { return m(cleanupPage);},},
+	"/app/recycle":{ view: function(vnode) { return m(recyclePage);},},
+	"/app/gallery":{ view: function(vnode) { return m(galleryPage);},},
 
 	"/app/recipient":{ view: function(vnode) { return m(recipientPage);},},
 	"/app/wallet":{ view: function(vnode) { return m(walletPage);},},
-	"/app/transaction":{ view: function(vnode) { return m(transactionPage);},},
+	"/app/earning":{ view: function(vnode) { return m(earningPage);},},
 
 });

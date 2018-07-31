@@ -23,8 +23,8 @@ m.route.link = function(vnode){
 m.route.prefix("")
 m.route.mode = "pathname"
 m.route(document.getElementById('appContent'), "/", {
-	"/":{ view: function(vnode) { return m(onboardPage);},},
-	"/login":{ view: function(vnode) { return m(indexPage);},},
+	"/":{ view: function(vnode) { return m(indexPage);},},
+	"/onboard":{ view: function(vnode) { return m(onboardPage);},},
 	// "/lock":{ view: function(vnode) { return m(lockPage);},},
 	// "/import":{ view: function(vnode) { return m(importPage);},},
 });
