@@ -60,39 +60,40 @@ export var menu = {
 	},
 	view: function(vnode) {
 		return (
-			<section id="menuBlur" class={"z-max w-100 "+menu.menuFixed}>
-				<div id="menuCover"  class="fixed z-max right-0 w-100 vh-100 fr dn pa0" style="">
-					<ul id="menuToggle" class="fr tr w-40 w-30-ns list pl0 vh-100 ma0 bg-yellow overflow-y-scroll overflow-y-hidden-l" style="">
+			<section id="menuBlur" class={"z-max w-100 cf "+menu.menuFixed}>
+				<div id="menuCover"  class="w-100 cf absolute bg-white-20 z-max vh-100 dn pa0" style="">
+					<div class="mw8 center">
+					<ul id="menuToggle" class="fr tr w-40 w-auto list pl0 vh-100 ma0 bg-yellow overflow-y-scroll overflow-y-hidden-l" style="">
 						<li class="w-100 cf pa3">
 							<Icons name="cancel" class="h1 dim dib white" onclick={menu.toggle}/>
 						</li>
 						<a oncreate={m.route.link} class="link white f5" href="/app/cleanup/">
-							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+							<li class="w-100 ttu tracked cf ph3 pv4 bb b--white-30" onclick={menu.toggle}>
 								Clean UP
 							</li>
 						</a>
 						<a oncreate={m.route.link} class="link white f5" href="/app/recycle/">
-							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+							<li class="w-100 ttu tracked cf ph3 pv4 bb b--white-30" onclick={menu.toggle}>
 								Recycle
 							</li>
 						</a>
 						<a oncreate={m.route.link} class="link white f5" href="/app/gallery/">
-							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+							<li class="w-100 ttu tracked cf ph3 pv4 bb b--white-30" onclick={menu.toggle}>
 								Gallery
 							</li>
 						</a>
 						<a oncreate={m.route.link} class="link white f5" href="/app/map/">
-							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+							<li class="w-100 ttu tracked cf ph3 pv4 bb b--white-30" onclick={menu.toggle}>
 								Dirt Map
 							</li>
 						</a>
 						<a oncreate={m.route.link} class="link white f5" href="/app/earning/">
-							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+							<li class="w-100 ttu tracked cf ph3 pv4 bb b--white-30" onclick={menu.toggle}>
 								Earnings
 							</li>
 						</a>
 						<a class="link white f5" href="/">
-							<li class="w-100 ttu tracked cf pa3 bb b--white-30" onclick={menu.toggle}>
+							<li class="w-100 ttu tracked cf ph3 pv4 bb b--white-30" onclick={menu.toggle}>
 								LOGOUT
 							</li>
 						</a>
@@ -100,11 +101,12 @@ export var menu = {
 							<small>Rinkeby Testnet via<br/> Infura Network</small>
 						</li>
 					</ul>
+					</div>
 				</div>
 
-				<nav id="nav" class="w-100 mw8 pa3 fixed z-9999">
+				<div id="nav" class="w-100 mw8 center bg-red pa3 cf z-9999">
 					<Icons name="menu" class=" purple h1 fr pa2 bg-white br1" onclick={menu.toggle}/>
-				</nav>
+				</div>
 
 				<div id="appAlert"></div>
 			</section>

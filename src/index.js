@@ -45,7 +45,7 @@ var page = {
 			<section style="" class="min-vh-100 mw8 center w-100">
 				<div id="appAlert"></div>
 				<div id="particles-js" class="absolute left-0 w-100"></div>
-				<article class="min-vh-100 dt w-100 absolute left-0 top-0">
+				<article class="min-vh-100 dt w-100 mw8 center absolute top-0">
 				  <div class="dtc v-mid tc white ph2">
 						<div class="center w-80-l">
 

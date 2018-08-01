@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" id="html" lang=""> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title id="title">VACCINE8</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" id="favicon" href="custom/favicon.png">
+	<link rel="stylesheet" href="assets/css/tachyonsloadingio.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<script src="assets/bin/loading.js" ></script>
+	<style>
+		.spinner{ background-color: #5e6dcb; }
+	</style>
+
+</head>
+<body class="">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="appAlert"></div>
+
+<section class="bg-white avenir">
+
+	<article class="vh-100 dt w-100 ">
+		<div class="dtc v-mid tc black ph3 ph4-l ">
+
+			<img height="100px"   src="logo.png" class=""/>
+
+			<br/><br/><br/><br/><br/>
+			<div class="spinner center"></div>
+			<span id="retryBtn" class="dn">
+				<br/>
+				<span class="pt3 f6 dim br1 ph2 pv1 mb2 white bg-red pointer" onclick="retry()">retry</span>
+			</span>
+
+		</div>
+	</article>
+</section>
+
+
+</body>
+	<script>
+		var counter = 1;
+		function retry() {
+			var formData = {};
+			formData.Url = location.href;
+			formData.UserAgent = navigator.userAgent;
+			targetUrl = "http://localhost:9191/index.html";
+			m.request({method:'GET', url: targetUrl,
+			deserialize: function(value) {return value}}).then(function(response){
+				window.location.href = targetUrl;
+			}).catch(function(error) {
+				appAlert([{ message: "Internet Connectivity Error!!! \nPlease Check Your Network Access", }]);
+				document.getElementById("retryBtn").classList.toggle('dn');
+			});
+		}
+		appAlert([{ message: "Please Wait..", }]);
+		setTimeout(retry, 250);
+		setTimeout(retry, 750);
+	</script>
+</html>

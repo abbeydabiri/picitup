@@ -1,3 +1,5 @@
+
+
 function menuToggle(appMenuID) {
 	var appMenuDiv = document.getElementById(appMenuID);
 	appMenuDiv.classList.toggle('dn');
